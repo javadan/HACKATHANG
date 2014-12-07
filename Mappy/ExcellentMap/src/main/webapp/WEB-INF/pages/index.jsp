@@ -140,7 +140,7 @@
     // }
     // );
     // $("#data").flexigrid({
-    //   url: 'data/griddata.json',
+    //   url: '${pageContext.request.contextPath}/resources/data/griddata.json',
     //   dataType: 'json',
     //   colModel : [
     //     {display: 'Longitude', name : 'lng', width : 140, sortable : true, align: 'center'},
@@ -155,7 +155,7 @@
     //   height: 200
     // });
     $("#data").flexigrid({
-      url: 'data/griddata.json',
+      url: '${pageContext.request.contextPath}/resources/data/griddata.json',
       dataType: 'json',
       colModel : [
         {display: 'ISO', name : 'iso', width : 40, sortable : true, align: 'center'},
