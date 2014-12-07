@@ -1,4 +1,4 @@
-package com.mkyong.controller;
+package za.co.studyanything.maps;
 
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
