@@ -19,16 +19,26 @@
   </head>
 
   <body>
-    <div id="data"></div>
+    <div id="fileuploadform">
+        Please choose an XLS or XLSX file to upload.  It must have a Longitude, Latitude, and Data column.
+	<form method="POST" enctype="multipart/form-data"
+		action="${pageContext.request.contextPath}/upload">
+		File to upload: <input type="file" name="file"><br />  <input type="submit"
+			value="Upload"> Press here to upload the file!
+	</form>
+    </div>
 
     <div id="longitude" class="slider"></div>
     <div id="latitude" class="slider"></div>
     <div id="datatude" class="slider"></div>
 
+    <div id="data"></div>
+
+
     <div id="map"></div>
 
 
-
+			
 
 
     <script type="text/javascript">
@@ -40,7 +50,7 @@
     });
 
     // Load the station data. When the data comes back, create an overlay.
-    d3.json("data/data.json", function(data) {
+    d3.json("${pageContext.request.contextPath}/resources/data/data.json", function(data) {
       var overlay = new google.maps.OverlayView();
 
       // Add the container when the overlay is added to the map.
